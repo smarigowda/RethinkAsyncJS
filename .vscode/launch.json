@@ -10,7 +10,8 @@
       "name": "Launch Program",
       // "program": "${workspaceRoot}/NestedCallback/meaningOfLife.js"
       // "program": "${workspaceRoot}/Thunk/syncThunk.js"
-      "program": "${workspaceRoot}/Thunk/asyncThunk.js"
+      // "program": "${workspaceRoot}/Thunk/asyncThunk.js"
+      "program": "${workspaceRoot}/Thunk/makeThunk.js"
     }
   ]
 }
