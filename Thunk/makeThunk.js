@@ -16,7 +16,20 @@ function addAsync(x, y, cb) {
 
 let thunk1 = makeThunk(addAsync, 10, 12);
 
-thunk1(function(result) {
-  console.log(result);
-});
+// thunk1(function(result) {
+//   console.log(result);
+// });
+
+function getData(x, cb) {
+  return cb(x * x);
+}
+
+debugger;
+
+let get10 = makeThunk(getData, 10);
+
+get10(function(d) {
+  console.log(d);
+})
+
 
