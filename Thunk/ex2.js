@@ -15,32 +15,28 @@ function output(text) {
   console.log(`rendering ${text}`);
 }
 
-// fakeAjax('file1', function(text) {
-//   output(text);
-// });
-
-// function getFile(file) {
-//   let cb = function (text) {
-//     handleResponse(file, text)
-//   }
-//   fakeAjax(file, cb);
-// }
-
 // Active Thunk
+// There is a race condition which is resolved by using closure to maintain the state
 function getFile(file) {
-  let text, fn; // bridging with closure
+  let text, fn; // using closure to maintain state
   fakeAjax(file, function(response) {
     if(fn) {
+      // if the thunk is run, then call the callback
       fn(response);
     } else {
-      text = response;
+      // if the thunk is not yet run, then
+      // hold on to the response
+      text = response; 
     }
   })
 
   return function(cb) {
     if(text) {
+      // response is ready, call the callback
       cb(text);
     } else {
+      // response is not yet ready
+      // so, do not call the callback
       fn = cb;
     }
   }
@@ -52,6 +48,8 @@ let th1 = getFile('file1');
 let th2 = getFile('file2');
 let th3 = getFile('file3');
 
+// thunks do not solve the callback issue
+// eliminate time complexity
 // nested call back
 // no looping through array // massive improvement
 // just using functions in different way
