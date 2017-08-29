@@ -11,7 +11,8 @@
       // "program": "${workspaceRoot}/NestedCallback/meaningOfLife.js"
       // "program": "${workspaceRoot}/Thunk/syncThunk.js"
       // "program": "${workspaceRoot}/Thunk/asyncThunk.js"
-      "program": "${workspaceRoot}/Thunk/makeThunk.js"
+      // "program": "${workspaceRoot}/Thunk/makeThunk.js"
+      "program": "${workspaceRoot}/Thunk/ex2.js"
     }
   ]
 }
