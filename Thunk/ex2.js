@@ -1,4 +1,5 @@
 function fakeAjax(url, cb) {
+  debugger;
   var fakeResponses = {
     "file1": "... first text",
     "file2": "... second text",
@@ -7,7 +8,9 @@ function fakeAjax(url, cb) {
   var randomDelay = (Math.round(Math.random() * 1E4) % 8000) + 1000;
   console.log(`requesting ${url} (response delay = ${randomDelay})`);
   setTimeout(function () {
+    debugger;
     cb(fakeResponses[url]);
+    debugger;
   }, randomDelay)
 }
 
