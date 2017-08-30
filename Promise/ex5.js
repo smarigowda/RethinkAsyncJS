@@ -25,20 +25,23 @@ function output(text) {
 // let getFilePromise = ASQ.wrap(fakeAjax, { simplecb: true });
 
 function getFile(file) {
+  console.log(`getFile request for - file ${file}`);
   return ASQ(function(done) {
     fakeAjax(file, done);
   })
 }
 
-let s1 = getFile('file1');
-let s2 = getFile('file2');
-let s3 = getFile('file3');
+// let s1 = getFile('file1');
+// let s2 = getFile('file2');
+// let s3 = getFile('file3');
 
-s1
+// all getFile requests are made in parallel.
+
+getFile('file1')
 .val(output)
-.seq(s2)
+.seq(getFile('file2'))
 .val(output)
-.seq(s3)
+.seq(getFile('file3'))
 .val(output)
 .val(function() {
   output('Complete !');
