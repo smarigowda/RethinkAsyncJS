@@ -13,7 +13,8 @@
       // "program": "${workspaceRoot}/Thunk/asyncThunk.js"
       // "program": "${workspaceRoot}/Thunk/makeThunk.js"
       // "program": "${workspaceRoot}/Thunk/ex2.js"
-      "program": "${workspaceRoot}/Partial/multiply.js"
+      // "program": "${workspaceRoot}/Partial/multiply.js"
+      "program": "${workspaceRoot}/Promise/delay.js"
     }
   ]
 }
