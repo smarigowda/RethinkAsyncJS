@@ -1,0 +1,23 @@
+{
+  "name": "RethinkAsyncJS",
+  "version": "1.0.0",
+  "description": "FEM Course re-thinking async JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/smarigowda/RethinkAsyncJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smarigowda/RethinkAsyncJS/issues"
+  },
+  "homepage": "https://github.com/smarigowda/RethinkAsyncJS#readme",
+  "dependencies": {
+    "asynquence": "^0.10.0"
+  }
+}

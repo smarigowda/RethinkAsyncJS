@@ -17,7 +17,8 @@
       // "program": "${workspaceRoot}/Promise/delay.js"
       // "program": "${workspaceRoot}/Promise/molife.js"
       // "program": "${workspaceRoot}/Promise/ex3.js"
-      "program": "${workspaceRoot}/Promise/ex4.js"
+      // "program": "${workspaceRoot}/Promise/ex4.js"
+      "program": "${workspaceRoot}/Promise/ex5.js"
     }
   ]
 }
