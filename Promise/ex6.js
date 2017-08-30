@@ -29,13 +29,13 @@ function getFile(file) {
 }
 
 ASQ()
-.seq(...['file1', 'file2', 'file3']
+.seq(...(['file1', 'file2', 'file3']
         .map(getFile)
-        .map(function(seq) {
+        .map(function transform(seq) {
           return function() {
             return seq.val(output);
           }
-        })
+        }))
 ) // order is not guaranteed
 .val(function() {
   output('Complete !');

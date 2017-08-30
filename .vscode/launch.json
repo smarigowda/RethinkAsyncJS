@@ -19,7 +19,9 @@
       // "program": "${workspaceRoot}/Promise/ex3.js"
       // "program": "${workspaceRoot}/Promise/ex4.js"
       // "program": "${workspaceRoot}/Promise/ex5.js"
-      "program": "${workspaceRoot}/Promise/ex6.js"
+      // "program": "${workspaceRoot}/Promise/ex6.js"
+      // "program": "${workspaceRoot}/Generators/ex1.js"
+      "program": "${workspaceRoot}/Generators/messagePassing.js"
     }
   ]
 }
