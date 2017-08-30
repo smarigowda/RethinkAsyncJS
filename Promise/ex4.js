@@ -36,11 +36,11 @@ function getFile(file) {
 
 ['file1', 'file2', 'file3']
 .map(getFile)
-.reduce(function combined(chain, pr) {
-  console.log(`chain = ${chain}`);
+.reduce(function combined(acc, pr) {
+  console.log(`acc = ${acc}`);
   console.log(`pr = ${pr}`);
   debugger;
-  return chain.then(function() {
+  return acc.then(function() {
     debugger;
     console.log(pr);
     return pr;
