@@ -32,7 +32,9 @@ ASQ()
 .seq(...['file1', 'file2', 'file3']
         .map(getFile)
         .map(function(seq) {
-          return seq.val(output);
+          return function() {
+            return seq.val(output);
+          }
         })
 ) // order is not guaranteed
 .val(function() {
